@@ -15,11 +15,6 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: ()=> import ('../components/AdminHome.vue')
-    },
-    {
       path:'/admin',
       name: 'admin',
       component: ()=> import ('../components/Admin/MasterLayout.vue')
@@ -43,6 +38,18 @@ const router = createRouter({
       path:'/admin/product/:id',
       name: 'admin_product_view_page',
       component: ()=> import ('./../components/Admin/Product/ProductView.vue')
+    },
+
+    {
+      path:'/test',
+      name: 'admin_',
+      component: ()=> import ('../components/Admin/Authenticate/SignUp.vue')
+    },
+
+     { 
+      path: '/:pathMatch(.*)*', 
+      name: 'NotFound', 
+      component: ()=> import ('../views/NotFound.vue') 
     }
   ]
 })

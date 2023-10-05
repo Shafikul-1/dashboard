@@ -1,9 +1,8 @@
 <script setup>
-import AdminHome from '../components/AdminHome.vue'
 </script>
 
 <template>
   <main>
-    <AdminHome />
+    <h1>HOme View Page</h1>
   </main>
 </template>
