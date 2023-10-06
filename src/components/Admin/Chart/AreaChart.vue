@@ -43,19 +43,15 @@ const options = {
 </script>
 
 <template>
-    <div class="col-xl-6">
-      <div class="card mb-4">
-        <div class="card-header">
-          <i class="fas fa-chart-area me-1"></i>
-          Line Chart Example
-        </div>
-        <div class="card-body">
-          <Line :data="data" :options="options" />
-        </div>
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <i class="fas fa-chart-area me-1"></i>
+      Line Chart Example
     </div>
+    <div class="card-body">
+      <Line :data="data" :options="options" />
+    </div>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -11,8 +11,8 @@ export const useCounterStore = defineStore('counter', () => {
   return { count, doubleCount, increment }
 })
 
-{
-  path:'/admin/',
-  name: 'admin_',
-  component: ()=> import ('')
-}
+// {
+//   path:'/admin/',
+//   name: 'admin_',
+//   component: ()=> import ('')
+// }

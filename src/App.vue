@@ -9,6 +9,3 @@ import NavBarView from './views/NavBarView.vue';
   </div>
 </template>
 
-<style  scoped>
-
-</style>

@@ -4,7 +4,8 @@ import { Doughnut } from 'vue-chartjs'
 // import * as chartConfig from './chartConfig.js'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
- const data = {  labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
+const data = {
+  labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
   datasets: [
     {
       backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
@@ -21,21 +22,17 @@ const options = {
 </script>
 
 <template>
-    <div class="col-xl-6">
-      <div class="card mb-4">
-        <div class="card-header">
-          <i class="fas fa-chart-bar me-1"></i>
-          Doughnut Chart Example
-        </div>
-        <div class="card-body">
-            <Doughnut :data="data" :options="options" />
-        </div>
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <i class="fas fa-chart-bar me-1"></i>
+      Doughnut Chart Example
     </div>
+    <div class="card-body">
+      <Doughnut :data="data" :options="options" />
+    </div>
+  </div>
 </template>
 
 
 
-<style scoped>
-
-</style>
+<style scoped></style>

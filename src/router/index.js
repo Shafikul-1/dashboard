@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,46 +6,39 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: ()=> import ('../views/HomeView.vue')
     },
     {
       path:'/admin',
       name: 'admin',
-      component: ()=> import ('../components/Admin/MasterLayout.vue')
+      component: ()=> import ('../views/Admin/AdminHome.vue')
     },
     {
-      path:'/admin/login',
-      name: 'admin_login_page',
-      component: ()=> import ('./../components/Admin/Authenticate/LogIn.vue')
-    },
+      path:'/admin/card',
+      name: 'admin_card',
+      component: ()=> import ('../views/Admin/CardView.vue')
+    }, 
     {
-      path:'/admin/register',
-      name: 'admin_register_page',
-      component: ()=> import ('./../components/Admin/Authenticate/SignUp.vue')
+      path:'/admin/chart',
+      name: 'admin_chart',
+      component: ()=> import ('../views/Admin/ChartView.vue')
     },
     {
       path:'/admin/product',
-      name: 'admin_roduct_page',
-      component: ()=> import ('./../components/Admin/Product/ProductList.vue')
+      name: 'admin_product_page',
+      component: ()=> import ('../views/Admin/ProductView.vue')
     },
     {
       path:'/admin/product/:id',
       name: 'admin_product_view_page',
-      component: ()=> import ('./../components/Admin/Product/ProductView.vue')
+      component: ()=> import ('../components/Admin/Product/ProductDetails.vue')
     },
-
     {
-      path:'/test',
-      name: 'admin_',
-      component: ()=> import ('../components/Admin/Authenticate/SignUp.vue')
+      path:'/admin/data-table',
+      name: 'admin_data-table',
+      component: ()=> import ('../views/Admin/DataTableView.vue')
     },
-
-     { 
+    { 
       path: '/:pathMatch(.*)*', 
       name: 'NotFound', 
       component: ()=> import ('../views/NotFound.vue') 
